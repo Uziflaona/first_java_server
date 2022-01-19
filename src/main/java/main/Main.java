@@ -17,7 +17,7 @@ public class Main {
                 new ServletContextHandler(ServletContextHandler.SESSIONS);
 
         ServletHolder servletHolder = new ServletHolder(firstServlet);
-        context.addServlet(servletHolder, "/authform");
+        context.addServlet(servletHolder, "/*");
 
         server.setHandler(context);
 
