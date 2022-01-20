@@ -18,6 +18,7 @@ public class FirstServlet extends HttpServlet {
         Map<String, Object> pageVariables = createPageVariableMap(request);
         String value = request.getParameter("key");
         pageVariables.put("key", value == null ? "" : value);
+
         response.getWriter().println(PageGenerator.instance().getPage("first.html", pageVariables));
 
         response.setContentType("text/html;charset=utf-8");
